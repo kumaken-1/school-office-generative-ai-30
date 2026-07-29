@@ -128,6 +128,18 @@ test("講座の画面から練習用の素材へ移動できる", async () => {
   assert.match(html, /すべて架空の内容で、実在の学校・自治体・人物とは関係ありません/);
 });
 
+// 巻をまたぐ行き来は片道になりやすい。Ⅰ側からⅡへのリンクと対にしておく。
+test("第1巻へ戻る導線があり、記録が巻ごとに別だと分かる", async () => {
+  const html = await read("../index.html");
+  const readme = await read("../README.md");
+
+  const url = "https://kumaken-1.github.io/generative-ai-summer-research-30/";
+  assert.ok(html.includes(url), "画面から第1巻へ戻れない");
+  assert.ok(readme.includes(url), "READMEに第1巻へのリンクがない");
+  assert.match(html, /記録は巻ごとに別々です/);
+  assert.match(html, /生成AI 30のチャレンジⅠ/);
+});
+
 test("コードとコンテンツのライセンスが分かれている", async () => {
   const codeLicense = await read("../LICENSE-CODE");
   const contentLicense = await read("../LICENSE-CONTENT");
