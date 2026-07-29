@@ -63,14 +63,14 @@ export function buildPrintPage(items) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>印刷用一覧｜学校校務の生成AI 30回講座</title>
+    <title>印刷用一覧｜生成AI 30のチャレンジⅡ～校務編～</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/print.css">
   </head>
   <body>
     <header class="hero">
       <div class="hero__inner">
-        <h1>学校校務の生成AI 30回講座</h1>
+        <h1>生成AI 30のチャレンジⅡ～校務編～</h1>
         <p class="hero__lead">こまっている校務から、ひとつ試すところから。</p>
       </div>
     </header>

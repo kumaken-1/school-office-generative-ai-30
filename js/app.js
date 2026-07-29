@@ -102,11 +102,11 @@ function renderSummary() {
   summaryRoot.replaceChildren(
     el("p", { className: "summary__count" }, [
       el("strong", { text: `${tried.length}` }),
-      document.createTextNode(` / ${challenges.length} 回を試しました`),
+      document.createTextNode(` / ${challenges.length} 個を試しました`),
     ]),
     el("p", {
       className: "field-note",
-      text: "順番も速さも自由です。1日に何回やっても、やらない日があってもかまいません。",
+      text: "順番も速さも自由です。1日に何個やっても、やらない日があってもかまいません。",
     }),
   );
 }
@@ -304,7 +304,7 @@ function renderDetail() {
       el("button", {
         type: "button",
         className: "quiet-button",
-        text: "この回のURLをコピー",
+        text: "このチャレンジのURLをコピー",
         "data-share": String(model.id),
       }),
     ]),
@@ -462,7 +462,7 @@ document.addEventListener("click", (event) => {
       : "やってみた記録を外しました");
   } else if (button.dataset.share) {
     const url = `${window.location.origin}${window.location.pathname}#c-${button.dataset.share}`;
-    copyText(url, "この回のURLをコピーしました").then((copied) => {
+    copyText(url, "このチャレンジのURLをコピーしました").then((copied) => {
       if (!copied) showToast(`コピーできませんでした。${url}`);
     });
   } else if (button === resetButton) {

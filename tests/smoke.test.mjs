@@ -16,7 +16,7 @@ const CONTENT_TYPES = {
   ".svg": "image/svg+xml",
 };
 const STORAGE_KEY = "school-office-ai-30-tried-v1";
-// 添付が必要な回。1回目のラベルと補足の確認に使う。
+// 添付が必要なチャレンジ。1回目のラベルと補足の確認に使う。
 const ATTACH_ID = 9;
 
 let server;
@@ -242,7 +242,7 @@ test("URLで直接ひらけ、共有できる", async () => {
     await page.goto(`${baseURL}/#c-12`, { waitUntil: "networkidle" });
     assert.equal(await page.locator("#challenge-dialog[open]").count(), 1);
 
-    await page.getByRole("button", { name: "この回のURLをコピー" }).click();
+    await page.getByRole("button", { name: "このチャレンジのURLをコピー" }).click();
     assert.match(await page.evaluate(() => window.__copied), /#c-12$/);
 
     await page.locator("#close-dialog").click();

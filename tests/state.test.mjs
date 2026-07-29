@@ -41,7 +41,7 @@ test("印は付け外しできる", () => {
 });
 
 // 同じドメインで初心者向けの10回講座と並べて公開しても、記録が混ざってはいけない。
-test("保存先は30回講座専用で、初心者講座の記録を読まない", () => {
+test("保存先は校務編専用で、初心者講座の記録を読まない", () => {
   assert.equal(STORAGE_KEY, "school-office-ai-30-tried-v1");
 
   const beginner = memoryStorage({

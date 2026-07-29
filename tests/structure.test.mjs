@@ -21,14 +21,14 @@ test("HTMLがJavaScriptより先に、日本語の骨組みを出す", async () 
   assert.match(html, /<html\s+lang="ja"/i);
   assert.match(html, /<meta\s+charset="utf-8"/i);
   assert.match(html, /<meta\s+name="viewport"\s+content="width=device-width,\s*initial-scale=1"/i);
-  assert.match(html, /<title>学校校務の生成AI 30回講座<\/title>/);
+  assert.match(html, /<title>生成AI 30のチャレンジⅡ～校務編～<\/title>/);
   assert.match(html, /<link\s+rel="stylesheet"\s+href="\.\/css\/styles\.css"/i);
   assert.match(html, /<link\s+rel="stylesheet"\s+href="\.\/css\/print\.css"\s+media="print"/i);
   assert.match(html, /<a[^>]+href="#main"/i);
   assert.match(html, /<main\s+id="main"/i);
   assert.match(html, /<script\s+type="module"\s+src="\.\/js\/app\.js"><\/script>/i);
   assert.match(html, /こまっている校務から、ひとつ試すところから。/);
-  assert.match(html, /1回だけでも、順番どおりでなくてもかまいません。/);
+  assert.match(html, /1個だけでも、順番どおりでなくてもかまいません。/);
 });
 
 test("ゲーム由来の仕掛けを画面から消してある", async () => {
@@ -79,9 +79,9 @@ test("初心者向けの言い回しが画面に出る", async () => {
     "うめた文をコピー",
     "くわしく",
     "やってみたことにする",
-    "この回のURLをコピー",
+    "このチャレンジのURLをコピー",
     "コピーしました。ChatGPTなどの生成AIを開いて貼り付けてください。",
-    "順番も速さも自由です。1日に何回やっても、やらない日があってもかまいません。",
+    "順番も速さも自由です。1日に何個やっても、やらない日があってもかまいません。",
   ]) {
     assert.ok(app.includes(label), `app.jsに無い: ${label}`);
   }

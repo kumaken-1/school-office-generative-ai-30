@@ -70,7 +70,7 @@ test("2通目は空欄ひとつと例3つを持ち、言い回しが偏らない
   assert.ok(leading <= 10, `「私は」で始まる文が多すぎる: ${leading}`);
 });
 
-test("返事を読む場面が、毎回その回のねらいとして書かれている", () => {
+test("返事を読む場面が、毎回そのチャレンジのねらいとして書かれている", () => {
   const replies = challenges.map(({ reply }) => reply);
   for (const [index, reply] of replies.entries()) {
     assert.match(reply, /^返事が来ます/, `id ${index + 1}`);
@@ -127,8 +127,8 @@ test("添付・撮影の回は、写り込みを確かめる手順を含む", ()
   }
 });
 
-// 好きな回から始められるようにするため、回どうしを番号で参照しない。
-test("ゲーム由来の語と、回どうしの参照を残さない", () => {
+// 好きなチャレンジから始められるようにするため、番号で参照しない。
+test("ゲーム由来の語と、チャレンジどうしの参照を残さない", () => {
   const source = challenges.flatMap((item) => [
     item.title,
     item.intro,
@@ -141,7 +141,7 @@ test("ゲーム由来の語と、回どうしの参照を残さない", () => {
   for (const word of ["クエスト", "ポイント", "称号", "レベル", "クリア", "７つの力", "7つの力"]) {
     assert.ok(!source.includes(word), `ゲーム由来の語が残っている: ${word}`);
   }
-  assert.doesNotMatch(source, /第\s*\d+\s*回/, "回どうしを番号で参照している");
+  assert.doesNotMatch(source, /第\s*\d+\s*回/, "チャレンジどうしを番号で参照している");
   assert.doesNotMatch(source, /チャレンジ\s*\d+/, "旧版の呼び方が残っている");
 });
 
@@ -157,7 +157,7 @@ test("入力例に個人情報を求めない", () => {
 });
 
 // 対象は「初心者講座を終えた一般職員」。私生活や一般的な作業のお題は入れない。
-test("全30回が校務のお題になっている", () => {
+test("全30個が校務のお題になっている", () => {
   const schoolWords = /学級|学年|校内|職員|保護者|児童|授業|行事|校務|学校|会議|担任|教室|校外|研修/;
   for (const item of challenges) {
     assert.match(
