@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460" role="img" aria-labelledby="screen-title screen-desc">
+  <title id="screen-title">練習用サンプル：架空の機器エラー画面</title>
+  <desc id="screen-desc">実在の学校・機器・システムとは関係ありません。生成AIに添付して、表示の意味を尋ねる練習に使う架空の画面です。個人情報、メールアドレス、Wi-Fiの名前、端末番号は含めていません。</desc>
+
+  <rect width="720" height="460" fill="#1f2a37"/>
+
+  <rect x="60" y="70" width="600" height="320" rx="12" fill="#f7f8fa" stroke="#c8cdd4" stroke-width="2"/>
+
+  <rect x="60" y="70" width="600" height="46" rx="12" fill="#e7eaee"/>
+  <rect x="60" y="104" width="600" height="12" fill="#e7eaee"/>
+  <circle cx="86" cy="93" r="6" fill="#c8cdd4"/>
+  <circle cx="106" cy="93" r="6" fill="#c8cdd4"/>
+  <circle cx="126" cy="93" r="6" fill="#c8cdd4"/>
+  <text x="150" y="99" font-family="sans-serif" font-size="15" fill="#5b6672">印刷ユーティリティ</text>
+
+  <circle cx="120" cy="180" r="26" fill="none" stroke="#b3541e" stroke-width="3"/>
+  <path d="M120 166v20" stroke="#b3541e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M120 194h.01" stroke="#b3541e" stroke-width="4" stroke-linecap="round"/>
+
+  <text x="164" y="176" font-family="sans-serif" font-size="22" font-weight="bold" fill="#1f2a37">プリンターに接続できません</text>
+  <text x="164" y="208" font-family="sans-serif" font-size="16" fill="#3d4753">エラーコード： NW-1042</text>
+  <text x="164" y="234" font-family="sans-serif" font-size="16" fill="#3d4753">対象のデバイスが応答しませんでした。</text>
+
+  <rect x="100" y="264" width="520" height="70" rx="8" fill="#eef1f4" stroke="#d5dae0"/>
+  <text x="118" y="290" font-family="sans-serif" font-size="14" fill="#5b6672">・ネットワークケーブルの接続を確認してください</text>
+  <text x="118" y="314" font-family="sans-serif" font-size="14" fill="#5b6672">・電源が入っているか確認してください</text>
+
+  <rect x="410" y="348" width="96" height="34" rx="6" fill="#fff" stroke="#8a939e"/>
+  <text x="458" y="371" font-family="sans-serif" font-size="15" fill="#3d4753" text-anchor="middle">閉じる</text>
+
+  <rect x="518" y="348" width="112" height="34" rx="6" fill="#2f6f4f"/>
+  <text x="574" y="371" font-family="sans-serif" font-size="15" fill="#fff" text-anchor="middle">再試行</text>
+
+  <text x="360" y="424" font-family="sans-serif" font-size="14" fill="#aab2bb" text-anchor="middle">練習用の架空画面です。実在の機器・システムとは関係ありません。</text>
+</svg>
