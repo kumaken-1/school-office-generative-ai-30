@@ -181,6 +181,39 @@ button:hover {
   margin-block-end: 0;
 }
 
+/* 節そのものを畳む形。ひとまとまり全部が、必要になるまで要らないとき。
+   最初の画面に説明を並べると、読む前に「面倒そう」で閉じられる。 */
+.guide--fold > summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--focus);
+  cursor: pointer;
+}
+
+.guide--fold > summary:hover {
+  text-decoration: underline;
+}
+
+.guide--fold > *:not(summary) {
+  font-size: 0.95rem;
+}
+
+.guide--fold[open] > summary {
+  margin-block-end: 0.5rem;
+}
+
+.guide ul {
+  margin-block: 0.4rem 0;
+  padding-inline-start: 1.2rem;
+}
+
+.guide li {
+  margin-block-end: 0.35rem;
+}
+
 /* 巻をまたぐ案内。本文と混ざらないよう、罫線で区切って少し小さく見せる。 */
 /* シリーズの巻を横並びで置く。いまいる巻はリンクにせず、現在地として示す。
    狭い画面では折り返す。指で押せるよう、どの項目も44px以上の高さを持つ。 */
